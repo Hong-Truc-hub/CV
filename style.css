@@ -1,0 +1,165 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Thay font cho dễ đọc và hiện đại hơn */
+    color: #333;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1100px; /* Mở rộng tối đa chiều rộng của container */
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Tăng độ đổ bóng */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f4e5da; /* Màu nền nhẹ nhàng cho sidebar */
+    color: #333;
+    width: 35%; /* Mở rộng sidebar */
+    padding: 20px;
+    text-align: left;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng phóng to cho ảnh */
+}
+
+.profile img:hover {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
+}
+
+.profile h1 {
+    font-size: 2em;
+    color: #4a4a4a;
+}
+
+.profile p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.profile p i {
+    margin-right: 8px;
+    color: #b76e79;
+}
+
+.section h2 {
+    font-size: 1.6em;
+    color: #333;
+    border-bottom: 2px solid #b76e79; /* Thêm đường gạch dưới cho các tiêu đề */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.section h2:hover {
+    color: #b76e79; /* Thay đổi màu chữ khi hover */
+    border-color: #4a4a4a; /* Thay đổi màu đường gạch dưới */
+}
+
+.section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+    font-size: 1em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.section ul li:hover {
+    transform: translateX(10px); /* Di chuyển nhẹ sang phải */
+    color: #b76e79; /* Thay đổi màu khi hover */
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    width: 65%; /* Thay đổi lại tỷ lệ phần trăm */
+    background-color: #fff;
+}
+
+.main-content section {
+    margin-bottom: 25px;
+}
+
+.main-content section h2 {
+    font-size: 1.8em;
+    color: #4a4a4a;
+    border-bottom: 3px solid #b76e79; /* Đường gạch dưới đậm hơn cho tiêu đề */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.main-content section h2:hover {
+    color: #b76e79; /* Thay đổi màu khi hover */
+    border-color: #4a4a4a; /* Thay đổi màu đường gạch dưới */
+}
+
+.main-content p, .main-content ul {
+    color: #5a5a5a;
+    font-size: 1.1em; /* Tăng kích thước chữ cho dễ đọc */
+    line-height: 1.6;
+    padding-left: 15px;
+}
+
+ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+a {
+    color: #b76e79;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Thêm hiệu ứng màu khi hover */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #333; /* Thay đổi màu khi hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Xếp chồng các phần khi màn hình nhỏ */
+        align-items: center;
+    }
+
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
